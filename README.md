@@ -1,1 +1,2 @@
 # Learning-JS
+These are the notes and code that I will take for the javascript.info tutorial. I will continue to add and follow along with the tutorial here as I go along witht tutorial. I would like to continue up to the point of DOM manipulation as well as APIs.
