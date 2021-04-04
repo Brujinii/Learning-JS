@@ -53,3 +53,34 @@ for (let key in user) {
     console.log( key );  // name, age, isAdmin
     console.log( user[key] ) // values for keys
 }
+
+// Optional Chaining, '?'
+let user = {};  // user has no address
+
+console.log( user?.address?.street );  // undefined (no error)
+
+// ?.() is used to call a function that may or may not exist
+
+let userAdmin = {
+    admin() {
+        console.log( "I am admin")
+    }
+};
+
+let userGuest = {};
+
+userAdmin.admin?.();  // I am admin
+
+userGuest.admin?.();  // nothing (no such method)
+
+// Can use brackets to check if a key would be able to be accessed or not
+let key = "firstName";
+
+let user1 = {
+    firstName: "John"
+};
+
+let user2 = null;
+
+alert( user1?.[key] ); // John
+alert( user2?.[key] ); // undefined
